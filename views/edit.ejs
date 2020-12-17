@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .header {
+        padding-top: 20px;
+        position: relative;
+        left: 120px;
+    }
+
+    .input-name {
+        position: relative;
+        left: 0px;
+        font-size: large;
+    }
+
+    #id {
+        position: relative;
+        left: 90px;
+        width: 353px;
+        padding: 5px;
+    }
+
+    #string {
+        position: relative;
+        left: 56px;
+        width: 353px;
+        padding: 5px;
+    }
+
+    #integer {
+        position: relative;
+        left: 45px;
+        width: 353px;
+        padding: 5px;
+    }
+
+    #float {
+        position: relative;
+        left: 65px;
+        width: 353px;
+        padding: 5px;
+    }
+
+    #date {
+        position: relative;
+        left: 70px;
+        width: 353px;
+        padding: 5px;
+    }
+
+    #boolean {
+        position: relative;
+        left: 40px;
+        width: 353px;
+        padding: 5px;
+    }
+
+    .button-edit {
+        position: relative;
+        left: 0px;
+        top: 10px;
+        background-color: rgb(94, 115, 233);
+        border: none;
+        color: white;
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+</style>
+
+<body>
+    <div class="header">
+        <h1>Edit data</h1>
+        <form action="/edit/<%= crud.id %>" method="post">
+            <label class="input-name" for="">ID</label>
+            <input id="id" type="integer" name="id" value="<%= crud.id %>" required />
+            <br />
+            <br />
+            <label class="input-name" for="">String</label>
+            <input id="string" type="text" name="string" value="<%= crud.string %>" required />
+            <br />
+            <br />
+            <label class="input-name" for="">integer</label>
+            <input id="integer" type="number" name="integer" value="<%= crud.integer %>" required />
+            <br />
+            <br />
+            <label class="input-name" for="">Float</label>
+            <input id="float" type="text" name="float" value="<%= crud.float %>" required />
+            <br />
+            <br />
+            <label class="input-name" for="">Date</label>
+            <input id="date" type="text" name="date" value="<%= crud.date %>" required />
+            <br />
+            <br />
+            <label class="input-name" for="">Boolean</label>
+            <input id="boolean" type="text" name="boolean" value="<%= crud.boolean %>" required />
+            <br />
+            <br />
+            <button class="button-edit" type="submit">Update</button>
+            <br />
+        </form>
+
+
+
+</body>
+
+</html>
